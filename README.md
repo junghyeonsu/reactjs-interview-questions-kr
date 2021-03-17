@@ -6,8 +6,8 @@
 | No. | Questions |
 | --- | --------- |
 |   | **Core React** |
-|1  | [리액트란 뭘까요?](#what-is-react) |
-|2  | [리액트의 가장 큰 특징은 뭘까요?](#what-are-the-major-features-of-react) |
+|1  | [리액트란 뭘까요?](#리액트란 뭘까요?) |
+|2  | [리액트의 가장 큰 특징은 뭘까요?](#리액트의 가장 큰 특징은 뭘까요?) |
 |3  | [What is JSX?](#what-is-jsx) |
 |4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
 |5  | [How to create components in React?](#how-to-create-components-in-react) |
