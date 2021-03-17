@@ -354,15 +354,19 @@
     
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### What are the major features of React?
+2. ### 리액트의 가장 큰 특징은 뭘까요?
 
-    The major features of React are:
+    리액트의 가장 큰 특징들:
+
+    * 리액트는 조작의 비용이 많이드는 RealDOM 대신에 **VirtualDOM**을 사용합니다.
+    * **서버 사이드 렌더링**을 지원합니다.
+    * 단방향 데이터 흐름 또는 데이터 바인딩을 따릅니다.
+    * 뷰를 개발하기 위해서 **재사용가능하고/구성가능한** UI 컴포넌트를 사용합니다.
 
     * It uses **VirtualDOM** instead of RealDOM considering that RealDOM manipulations are expensive.
     * Supports **server-side rendering**.
     * Follows **Unidirectional** data flow or data binding.
     * Uses **reusable/composable** UI components to develop the view.
-
 
    **[⬆ Back to Top](#table-of-contents)**
 
