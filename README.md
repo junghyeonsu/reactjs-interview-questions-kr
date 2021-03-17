@@ -6,8 +6,8 @@
 | No. | Questions |
 | --- | --------- |
 |   | **Core React** |
-|1  | [리액트란 뭘까요?](#리액트란 뭘까요?) |
-|2  | [리액트의 가장 큰 특징은 뭘까요?](#리액트의 가장 큰 특징은 뭘까요?) |
+|1  | [리액트가 무엇인가요?](#리액트가-무엇인가요) |
+|2  | [리액트의 가장 주요한 특징은 뭘까요?](#리액트의-가장-주요한-특징은-뭘까요?) |
 |3  | [What is JSX?](#what-is-jsx) |
 |4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
 |5  | [How to create components in React?](#how-to-create-components-in-react) |
@@ -346,7 +346,7 @@
 
 
     
-1. ### 리액트란 뭘까요?
+1. ### 리액트가 무엇인가요?
 
     ![image](https://user-images.githubusercontent.com/54893898/111304400-09f37300-8699-11eb-95a0-5aab08dd7cfc.png)
 
@@ -354,7 +354,7 @@
     
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### 리액트의 가장 큰 특징은 뭘까요?
+2. ### 리액트의 가장 주요한 특징은 뭘까요?
 
     리액트의 가장 큰 특징들:
 
@@ -362,6 +362,7 @@
     * **서버 사이드 렌더링**을 지원합니다.
     * 단방향 데이터 흐름 또는 데이터 바인딩을 따릅니다.
     * 뷰를 개발하기 위해서 **재사용가능하고/구성가능한** UI 컴포넌트를 사용합니다.
+
 
     * It uses **VirtualDOM** instead of RealDOM considering that RealDOM manipulations are expensive.
     * Supports **server-side rendering**.
