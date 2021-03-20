@@ -6,9 +6,9 @@
 | No. | Questions |
 | --- | --------- |
 |   | **Core React** |
-|1  | [리액트가 무엇인가요?](#리액트가-무엇인가요) |
+|1  | [리액트가 무엇인가요?](#리액트가-무엇인가요?) |
 |2  | [리액트의 가장 주요한 특징은 뭘까요?](#리액트의-가장-주요한-특징은-뭘까요?) |
-|3  | [What is JSX?](#what-is-jsx) |
+|3  | [JSX가 뭘까요?](#JSX가-뭘까요?) |
 |4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
 |5  | [How to create components in React?](#how-to-create-components-in-react) |
 |6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
@@ -363,20 +363,14 @@
     * 단방향 데이터 흐름 또는 데이터 바인딩을 따릅니다.
     * 뷰를 개발하기 위해서 **재사용가능하고/구성가능한** UI 컴포넌트를 사용합니다.
 
-
-    * It uses **VirtualDOM** instead of RealDOM considering that RealDOM manipulations are expensive.
-    * Supports **server-side rendering**.
-    * Follows **Unidirectional** data flow or data binding.
-    * Uses **reusable/composable** UI components to develop the view.
-
    **[⬆ Back to Top](#table-of-contents)**
 
     
-3. ### What is JSX?
+3. ### JSX가 뭘까요?
 
-    *JSX* is a XML-like syntax extension to ECMAScript (the acronym stands for *JavaScript XML*). Basically it just provides syntactic sugar for the `React.createElement()` function, giving us expressiveness of JavaScript along with HTML like template syntax.
+    *JSX*는 ECMAScript에 대한 XML 유사 확장 구문입니다. (약어는 *JavaScript XML*을 나타냅니다.). 기본적으로 우리에게 JavaScript `React.createElement()` 함수에 대한 *syntactic sugar*을 제공하여, HTML과 같은 템플릿 구문과 함께 JavaScript의 표현력을 제공합니다. 
 
-    In the example below text inside `<h1>` tag is returned as JavaScript function to the render function.
+    아래 예시에서는 `<h1>` 태그안의 텍스트는 JavaScript 함수로써 렌더링함수에게 반환이됩니다.
 
     ```jsx harmony
     class App extends React.Component {
