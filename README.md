@@ -6,9 +6,9 @@
 | No. | Questions |
 | --- | --------- |
 |   | **Core React** |
-|1  | [리액트가 무엇인가요?](#리액트가-무엇인가요?) |
-|2  | [리액트의 가장 주요한 특징은 뭘까요?](#리액트의-가장-주요한-특징은-뭘까요?) |
-|3  | [JSX가 뭘까요?](#JSX가-뭘까요?) |
+|1  | [리액트가 무엇인가요?](#리액트가-무엇인가요) |
+|2  | [리액트의 가장 주요한 특징은 뭘까요?](#리액트의-가장-주요한-특징은-뭘까요) |
+|3  | [JSX가 뭘까요?](#JSX가-뭘까요) |
 |4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
 |5  | [How to create components in React?](#how-to-create-components-in-react) |
 |6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
