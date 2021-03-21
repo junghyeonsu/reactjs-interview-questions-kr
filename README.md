@@ -1,4 +1,4 @@
-# 리액트 인터뷰 질문 & 답변
+# React 인터뷰 질문 & 답변
 > 이 레파지토리는 [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)를 번역한 레파지토리입니다.
 
 ### Table of Contents
@@ -6,10 +6,10 @@
 | No. | Questions |
 | --- | --------- |
 |   | **Core React** |
-|1  | [리액트가 무엇인가요?](#리액트가-무엇인가요) |
-|2  | [리액트의 가장 주요한 특징은 뭘까요?](#리액트의-가장-주요한-특징은-뭘까요) |
+|1  | [React가 무엇인가요?](#React가-무엇인가요) |
+|2  | [React의 가장 주요한 특징은 뭘까요?](#React의-가장-주요한-특징은-뭘까요) |
 |3  | [JSX가 뭘까요?](#JSX가-뭘까요) |
-|4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
+|4  | [Element와 Component의 차이점은 무엇일까요?](#Element와-Component의-차이점은-무엇일까요) |
 |5  | [How to create components in React?](#how-to-create-components-in-react) |
 |6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
 |7  | [What are Pure Components?](#what-are-pure-components) |
@@ -346,19 +346,19 @@
 
 
     
-1. ### 리액트가 무엇인가요?
+1. ### React가 무엇인가요?
 
     ![image](https://user-images.githubusercontent.com/54893898/111304400-09f37300-8699-11eb-95a0-5aab08dd7cfc.png)
 
-    리액트는 단일 페이지 애플리케이션을위한 사용자 인터페이스를 구축하는데 사용되는 **자바스크립트 프론트엔드 오픈소스 라이브러리**입니다. 리액트는 웹 페이지와 모바일 애플리케이션의 뷰 레이어를 처리하는데 사용됩니다. 리액트는 페이스북의 소프트웨어 엔지니어인 [Jordan Walke](https://github.com/jordwalke)에 의해 만들어졌습니다. 리액트는 2011년에 페이스북의 뉴스 피드에 처음으로 배포되었고, 2012년에는 인스타그램에 배포되었습니다. 
+    React는 단일 페이지 애플리케이션을위한 사용자 인터페이스를 구축하는데 사용되는 **자바스크립트 프론트엔드 오픈소스 라이브러리**입니다. React는 웹 페이지와 모바일 애플리케이션의 뷰 레이어를 처리하는데 사용됩니다. React는 페이스북의 소프트웨어 엔지니어인 [Jordan Walke](https://github.com/jordwalke)에 의해 만들어졌습니다. React는 2011년에 페이스북의 뉴스 피드에 처음으로 배포되었고, 2012년에는 인스타그램에 배포되었습니다. 
     
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### 리액트의 가장 주요한 특징은 뭘까요?
+2. ### React의 가장 주요한 특징은 뭘까요?
 
-    리액트의 가장 큰 특징들:
+    React의 가장 큰 특징들:
 
-    * 리액트는 조작의 비용이 많이드는 RealDOM 대신에 **VirtualDOM**을 사용합니다.
+    * React는 조작의 비용이 많이드는 RealDOM 대신에 **VirtualDOM**을 사용합니다.
     * **서버 사이드 렌더링**을 지원합니다.
     * 단방향 데이터 흐름 또는 데이터 바인딩을 따릅니다.
     * 뷰를 개발하기 위해서 **재사용가능하고/구성가능한** UI 컴포넌트를 사용합니다.
@@ -387,11 +387,11 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-4. ### What is the difference between Element and Component?
+4. ### Element와 Component의 차이점은 무엇일까요?
 
-    An *Element* is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. *Elements* can contain other *Elements* in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
+    *Element*는 DOM 노드 또는 다른 Component들과 관련하여 화면에 표시 할 내용을 나타내는 일반 개체입니다. *Element*는 또 다른 *Element*를 그들의 props에 포함시킬 수 있습니다. React Element를 만드는 것은 저렴합니다. 한 번 Element가 생성되면 절대 변경되지 않습니다.
 
-    The object representation of React Element would be as follows:
+    React Element 객체 표현은 다음과 같습니다:
 
     ```javascript
     const element = React.createElement(
@@ -401,7 +401,7 @@
     )
     ```
 
-    The above `React.createElement()` function returns an object:
+    위의 `React.createElement ()` 함수는 객체를 반환합니다:
 
     ```
     {
@@ -413,20 +413,20 @@
     }
     ```
 
-    And finally it renders to the DOM using `ReactDOM.render()`:
+    그리고 `ReactDOM.render()`를 사용해서 DOM에 최종적으로 렌더링합니다:
 
     ```html
     <div id='login-btn'>Login</div>
     ```
 
-    Whereas a **component** can be declared in several different ways. It can be a class with a `render()` method. Alternatively, in simple cases, it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output:
+    반면에 **component**는 여러 방향으로 선언될 수 있습니다. **component**는 `render()` method와 함께 class가 될 수 있습니다. 반대로 간단한 경우에는 **component**는 function로 정의될 수 있습니다. 두 경우 전부 props를 input으로 사용할 수 있고 출력으로 JSX tree를 반환합니다:
 
     ```javascript
     const Button = ({ onLogin }) =>
       <div id={'login-btn'} onClick={onLogin}>Login</div>
     ```
 
-    Then JSX gets transpiled to a `React.createElement()` function tree:
+    그 다음 JSX는`React.createElement ()` 함수 트리로 변환됩니다:
 
     ```javascript
     const Button = ({ onLogin }) => React.createElement(
