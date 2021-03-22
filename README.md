@@ -10,7 +10,7 @@
 |2  | [React의 가장 주요한 특징은 뭘까요?](#React의-가장-주요한-특징은-뭘까요) |
 |3  | [JSX가 뭘까요?](#JSX가-뭘까요) |
 |4  | [Element와 Component의 차이점은 무엇일까요?](#Element와-Component의-차이점은-무엇일까요) |
-|5  | [How to create components in React?](#how-to-create-components-in-react) |
+|5  | [React에서 Component를 만드는 방법은 무엇일까요?](#React에서-Component를-만드는-방법은-무엇일까요) |
 |6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
 |7  | [What are Pure Components?](#what-are-pure-components) |
 |8  | [What is state in React?](#what-is-state-in-react) |
@@ -439,11 +439,11 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-5. ### How to create components in React?
+5. ### React에서 Component를 만드는 방법은 무엇일까요?
 
-    There are two possible ways to create a component.
+    component를 만드는 두 가지 방법이 있습니다.
 
-    1. **Function Components:** This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as first parameter and return React elements:
+    1. **Function Components(함수형 컴포넌트):** component를 만드는 간단한 방식입니다. 함수형 컴포넌트는 props 객체를 첫 번째 매개 변수로 받아들이고 React elements를 반환하는 순수한 JavaScript 함수입니다.
 
         ```jsx harmony
         function Greeting({ message }) {
@@ -452,7 +452,7 @@
         }
         ```
 
-    2. **Class Components:** You can also use ES6 class to define a component. The above function component can be written as:
+    2. **Class Components(클래스 컴포넌트):** ES6 class를 사용해서 component를 정의할 수 있습니다. 다음과 같이 사용할 수 있습니다:
 
         ```jsx harmony
         class Greeting extends React.Component {
