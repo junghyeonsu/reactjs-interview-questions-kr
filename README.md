@@ -11,7 +11,7 @@
 |3  | [JSX가 뭘까요?](#JSX가-뭘까요) |
 |4  | [Element와 Component의 차이점은 무엇일까요?](#Element와-Component의-차이점은-무엇일까요) |
 |5  | [React에서 Component를 만드는 방법은 무엇일까요?](#React에서-Component를-만드는-방법은-무엇일까요) |
-|6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
+|6  | [함수형 컴포넌트 대신에 클래스 컴포넌트를 사용하는 때는 언제일까요?](#함수형-컴포넌트-대신에-클래스-컴포넌트를-사용하는-때는-언제일까요) |
 |7  | [What are Pure Components?](#what-are-pure-components) |
 |8  | [What is state in React?](#what-is-state-in-react) |
 |9  | [What are props in React?](#what-are-props-in-react) |
@@ -465,10 +465,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-6. ### When to use a Class Component over a Function Component?
+6. ### 함수형 컴포넌트 대신에 클래스 컴포넌트를 사용하는 때는 언제일까요?
 
-    If the component needs *state or lifecycle methods* then use class component otherwise use function component.
-    *However, from React 16.8 with the addition of Hooks, you could use state , lifecycle  methods and other features that were only available in class component right in your function component.*
+    만약 *state(상태) or lifecycle(라이프사이클) 함수들*이 컴포넌트에 필요하다면, 함수형 컴포넌트 대신에 클래스 컴포넌트를 사용해야 합니다.
+    *하지만, Hooks(state를 사용할 수 있습니다.), lifecycle 함수들, 그리고 클래스 컴포넌트에서만 가능했던 다른 기능들이 React 16.8 버전부터 함수형 컴포넌트에서 사용 가능해졌습니다.*
 
 
    **[⬆ Back to Top](#table-of-contents)**
