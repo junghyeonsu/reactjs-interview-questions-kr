@@ -475,7 +475,7 @@
     
 7. ### Pure Components는 무엇일까요?
 
-    *`React.PureComponent`*는 *`React.Component`*에서 `shouldComponentUpdate()` 메소드를 제공해주는 것 빼고는 *`React.Component`*와 정확히 같습니다. props와 state가 바뀔 때, *PureComponent*는 state와 props 둘 다 얕은 비교(shallow comparison)을 수행합니다. 반면에 *Component*는 현재 props와 state를 다음 항목과 비교하지 않습니다. 그래서 component는 `shouldComponentUpdate`가 불려질 때마다 다시 렌더링(re-render)됩니다.
+    *`React.PureComponent`* 는 *`React.Component`* 에서 `shouldComponentUpdate()` 메소드를 제공해주는 것 빼고는 *`React.Component`* 와 정확히 같습니다. props와 state가 바뀔 때, *PureComponent* 는 state와 props 둘 다 얕은 비교(shallow comparison)을 수행합니다. 반면에 *Component*는 현재 props와 state를 다음 항목과 비교하지 않습니다. 그래서 component는 `shouldComponentUpdate`가 불려질 때마다 다시 렌더링(re-render)됩니다.
 
 
    **[⬆ Back to Top](#table-of-contents)**
