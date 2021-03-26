@@ -13,7 +13,7 @@
 |5  | [React에서 Component를 만드는 방법은 무엇일까요?](#React에서-Component를-만드는-방법은-무엇일까요) |
 |6  | [함수형 컴포넌트 대신에 클래스 컴포넌트를 사용하는 때는 언제일까요?](#함수형-컴포넌트-대신에-클래스-컴포넌트를-사용하는-때는-언제일까요) |
 |7  | [Pure Components는 무엇일까요?](#Pure-Components는-무엇일까요) |
-|8  | [What is state in React?](#what-is-state-in-react) |
+|8  | [React에서 state는 무엇일까요?](#React에서-state는-무엇일까요) |
 |9  | [What are props in React?](#what-are-props-in-react) |
 |10 | [What is the difference between state and props?](#what-is-the-difference-between-state-and-props) |
 |11 | [Why should we not update the state directly?](#why-should-we-not-update-the-state-directly) |
@@ -480,12 +480,11 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-8. ### What is state in React?
+8. ### React에서 state는 무엇일까요?
 
-    *State* of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
+    component의 *State* 는 component의 수명 동안 변경될 수 있는 일부 정보를 담고있는 객체입니다. 그래서 우리는 state를 가능한 한 단순하게 만들고 stateful component의 개수를 최소화해야합니다.
 
-    Let's create an user component with message state,
-
+    메세지 state를 가지는 user component를 만들어봅시다.
 
     ```jsx harmony
     class User extends React.Component {
@@ -507,9 +506,7 @@
     }
     ```
 
-    ![state](images/state.jpg)
-
-    State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any component other than the one that owns and sets it.
+    State는 props와 비슷하지만, state는 private하고 완전히 component에 의해 조종됩니다. 즉, State는 component가 소유하고 설정하는 component 이외에는 접근할 수 없습니다.
 
 
    **[⬆ Back to Top](#table-of-contents)**
