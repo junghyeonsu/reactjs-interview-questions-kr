@@ -14,7 +14,7 @@
 |6  | [함수형 컴포넌트 대신에 클래스 컴포넌트를 사용하는 때는 언제일까요?](#함수형-컴포넌트-대신에-클래스-컴포넌트를-사용하는-때는-언제일까요) |
 |7  | [Pure Components는 무엇일까요?](#Pure-Components는-무엇일까요) |
 |8  | [React에서 state는 무엇일까요?](#React에서-state는-무엇일까요) |
-|9  | [What are props in React?](#what-are-props-in-react) |
+|9  | [React에서 props는 무엇일까요?](#React에서-props는-무엇일까요) |
 |10 | [What is the difference between state and props?](#what-is-the-difference-between-state-and-props) |
 |11 | [Why should we not update the state directly?](#why-should-we-not-update-the-state-directly) |
 |12 | [What is the purpose of callback function as an argument of setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
@@ -511,23 +511,23 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-9. ### What are props in React?
+9. ### React에서 props는 무엇일까요?
 
-    *Props* are inputs to components. They are single values or objects containing a set of values that are passed to components on creation using a naming convention similar to HTML-tag attributes. They are data passed down from a parent component to a child component.
+    *Props* 는 component에 대한 입력값입니다. props에는 HTML 태그 속성과 비슷한 명명 규칙을 사용해서 component 생성 시 전달되는 객체들 또는 단일 값들입니다. props는 부모 component에서 자식 component로 전달됩니다.
 
-    The primary purpose of props in React is to provide following component functionality:
+    React props의 주요 목적은 다음과 같은 component 기능을 제공하는 것입니다.
 
-    1. Pass custom data to your component.
-    2. Trigger state changes.
-    3. Use via `this.props.reactProp` inside component's `render()` method.
+    1. 맞춤 데이터를 자신의 component에 전달합니다.
+    2. state 변경을 일으킵니다.
+    3. component의 `render()` 메소드를 안에 `this.props.reactProp` 구문을 사용합니다.
 
-    For example, let us create an element with `reactProp` property:
+    예를 들어, `reactProp`특성을 사용해서 element를 만들어봅시다:
 
     ```jsx harmony
     <Element reactProp={'1'} />
     ```
 
-    This `reactProp` (or whatever you came up with) name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
+    이 `reactProp`이라는 이름은 (또는 우리가 생각하는 무엇이든지) React 라이브러리를 사용해서 만들어져 모든 component에 이미 존재하는 React의 native props 객체에 연결된 속성이 됩니다.
 
     ```
     props.reactProp
