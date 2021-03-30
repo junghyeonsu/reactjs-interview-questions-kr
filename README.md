@@ -16,7 +16,7 @@
 |8  | [React에서 state는 무엇일까요?](#React에서-state는-무엇일까요) |
 |9  | [React에서 props는 무엇일까요?](#React에서-props는-무엇일까요) |
 |10 | [state와 props의 차이는 무엇일까요?](#state와-props의-차이는-무엇일까요) |
-|11 | [Why should we not update the state directly?](#why-should-we-not-update-the-state-directly) |
+|11 | [왜 state는 직접 바꾸면 안될까요?](#왜-state는-직접-바꾸면-안될까요) |
 |12 | [What is the purpose of callback function as an argument of setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
 |13 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling) |
 |14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
@@ -350,7 +350,7 @@
 
     ![image](https://user-images.githubusercontent.com/54893898/111304400-09f37300-8699-11eb-95a0-5aab08dd7cfc.png)
 
-    React는 단일 페이지 애플리케이션을위한 사용자 인터페이스를 구축하는데 사용되는 **자바스크립트 프론트엔드 오픈소스 라이브러리**입니다. React는 웹 페이지와 모바일 애플리케이션의 뷰 레이어를 처리하는데 사용됩니다. React는 페이스북의 소프트웨어 엔지니어인 [Jordan Walke](https://github.com/jordwalke)에 의해 만들어졌습니다. React는 2011년에 페이스북의 뉴스 피드에 처음으로 배포되었고, 2012년에는 인스타그램에 배포되었습니다. 
+    React는 단일 페이지 애플리케이션을위한 사용자 인터페이스를 구축하는데 사용되는 **JavaScript 프론트엔드 오픈소스 라이브러리**입니다. React는 웹 페이지와 모바일 애플리케이션의 뷰 레이어를 처리하는데 사용됩니다. React는 페이스북의 소프트웨어 엔지니어인 [Jordan Walke](https://github.com/jordwalke)에 의해 만들어졌습니다. React는 2011년에 페이스북의 뉴스 피드에 처음으로 배포되었고, 2012년에는 인스타그램에 배포되었습니다. 
     
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -543,23 +543,25 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-11. ### Why should we not update the state directly?
+11. ### 왜 state는 직접 바꾸면 안될까요?
 
     If you try to update state directly then it won't re-render the component.
+
+    만약에 state를 직접적으로 바꾸려고 한다면, component가 다시 렌더링되지 않습니다.
 
     ```javascript
     //Wrong
     this.state.message = 'Hello world'
     ```
 
-    Instead use `setState()` method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
+    대신에 `setState()` 메소드를 사용합니다. `setState()`는 component의 state 객체 업데이트를 스케줄합니다. state가 변할 때, component는 다시 렌더링해서 반응합니다.
 
     ```javascript
     //Correct
     this.setState({ message: 'Hello World' })
     ```
 
-    **Note:** You can directly assign to the state object either in *constructor* or using latest javascript's class field declaration syntax.
+    **Note:** *constructor* 또는 javascript의 최신 클래스 필드 선언 문법을 사용해서 state 객체에 직접적으로 할당할 수 있습니다.
 
 
    **[⬆ Back to Top](#table-of-contents)**
