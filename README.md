@@ -566,7 +566,6 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-12. ### What is the purpose of callback function as an argument of `setState()`?
 12. ### setState()의 인자로서 콜백함수의 목적은 무엇일까요?
 
     콜백 함수는 setState 함수가 완료되고 component가 렌더링 될 때 발생합니다. `setState()` 함수는 **비동기** 함수이므로 모든 post action에 콜백 함수가 사용됩니다.
