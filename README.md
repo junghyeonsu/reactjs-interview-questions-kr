@@ -17,7 +17,7 @@
 |9  | [React에서 props는 무엇일까요?](#React에서-props는-무엇일까요) |
 |10 | [state와 props의 차이는 무엇일까요?](#state와-props의-차이는-무엇일까요) |
 |11 | [왜 state는 직접 바꾸면 안될까요?](#왜-state는-직접-바꾸면-안될까요) |
-|12 | [What is the purpose of callback function as an argument of setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
+|12 | [setState()의 인자로서 콜백함수의 목적은 무엇일까요?](#setState()의-인자로서-콜백함수의-목적은-무엇일까요)
 |13 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling) |
 |14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
 |15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
@@ -567,13 +567,14 @@
    **[⬆ Back to Top](#table-of-contents)**
     
 12. ### What is the purpose of callback function as an argument of `setState()`?
+12. ### setState()의 인자로서 콜백함수의 목적은 무엇일까요?
 
-    The callback function is invoked when setState finished and the component gets rendered. Since `setState()` is **asynchronous** the callback function is used for any post action.
+    콜백 함수는 setState 함수가 완료되고 component가 렌더링 될 때 발생합니다. `setState()` 함수는 **비동기** 함수이므로 모든 post action에 콜백 함수가 사용됩니다.
 
-    **Note:** It is recommended to use lifecycle method rather than this callback function.
+    **Note:** 콜백 함수보다는 라이프사이클 메소드를 사용하는 것이 더 좋습니다.
 
     ```javascript
-    setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))
+    setState({ name: '현수' }, () => console.log('name state가 업데이트되고 component가 렌더링 되었습니다.'))
     ```
 
 
