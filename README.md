@@ -18,7 +18,7 @@
 |10 | [state와 props의 차이는 무엇일까요?](#state와-props의-차이는-무엇일까요) |
 |11 | [왜 state는 직접 바꾸면 안될까요?](#왜-state는-직접-바꾸면-안될까요) |
 |12 | [setState()의 인자로서 콜백함수의 목적은 무엇일까요?](#setState()의-인자로서-콜백함수의-목적은-무엇일까요)
-|13 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling) |
+|13 | [HTML와 React간에 이벤트를 다루는 방법의 차이는 무엇일까요?](#HTML와-React간에-이벤트를-다루는-방법의-차이는-무엇일까요) |
 |14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
 |15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
@@ -579,38 +579,38 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-13. ### What is the difference between HTML and React event handling?
-    Below are some of the main differences between HTML and React event handling,
+13. ### HTML와 React간에 이벤트를 다루는 방법의 차이는 무엇일까요?
+    아래는 HTML와 React가 이벤트를 다루는 주요한 차이점들입니다.
 
-    1. In HTML, the event name should be in *lowercase*:
+    1. HTML에서는, 이벤트 이름이 *소문자* 여야 합니다:
 
         ```html
         <button onclick='activateLasers()'>
         ```
 
-       Whereas in React it follows *camelCase* convention:
+       반면에 React에서는 *낙타표기법* 을 따릅니다:
 
         ```jsx harmony
         <button onClick={activateLasers}>
         ```
 
-    2. In HTML, you can return `false` to prevent default behavior:
+    2. HTML에서는, 기본 동작을 방지하기 위해서 `false`를 리턴할 수 있습니다:
 
         ```html
-        <a href='#' onclick='console.log("The link was clicked."); return false;' />
+        <a href='#' onclick='console.log("링크가 클릭됐습니다."); return false;' />
         ```
 
-       Whereas in React you must call `preventDefault()` explicitly:
+       반면에 React에서는 명시적으로 `preventDefault()`를 불러야만 합니다:
 
         ```javascript
         function handleClick(event) {
           event.preventDefault()
-          console.log('The link was clicked.')
+          console.log('링크가 클릭됐습니다.')
         }
         ```
 
-    3. In HTML, you need to invoke the function by appending `()`
-       Whereas in react you should not append `()` with the function name. (refer "activateLasers" function in the first point for example)
+    3. HTML에서는, `()`를 사용해서 함수를 실행시켜야 합니다.
+       반면에 React에서는 `()` 기호를 함수 뒤에 붙일 필요가 없습니다. (1번에서 activateLasers 함수를 참고하세요)
 
 
    **[⬆ Back to Top](#table-of-contents)**
