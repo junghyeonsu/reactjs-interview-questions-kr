@@ -19,7 +19,7 @@
 |11 | [왜 state는 직접 바꾸면 안될까요?](#왜-state는-직접-바꾸면-안될까요) |
 |12 | [setState()의 인자로서 콜백함수의 목적은 무엇일까요?](#setState()의-인자로서-콜백함수의-목적은-무엇일까요)
 |13 | [HTML와 React간에 이벤트를 다루는 방법의 차이는 무엇일까요?](#HTML와-React간에-이벤트를-다루는-방법의-차이는-무엇일까요) |
-|14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
+|14 | [JSX 콜백안에 메소드나 이벤트 핸들러를 어떻게 적용할 수 있을까요?](#JSX-콜백안에-메소드나-이벤트-핸들러를-어떻게-적용할-수-있을까요) |
 |15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
 |17 | [What are inline conditional expressions?](#what-are-inline-conditional-expressions) |
@@ -615,11 +615,11 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-14. ### How to bind methods or event handlers in JSX callbacks?
+14. ### JSX 콜백안에 메소드나 이벤트 핸들러를 어떻게 bind할 수 있을까요?
 
-    There are 3 possible ways to achieve this:
+    이 문제에는 세 가지 방법이 있습니다.
 
-    1.	**Binding in Constructor:** In JavaScript classes, the methods are not bound by default. The same thing applies for React event handlers defined as class methods. Normally we bind them in constructor.
+    1.  **Constructor에서 적용하기:** JavaScript class 안에서, 메소드는 기본적으로 bind 되지 않습니다. 클래스 메소드로 정의된 React 이벤트 핸들러 역시, 기본적으로 bind 되지않습니다. 일반적으로 메소드나 이벤트 핸들러는 constructor안에서 bind됩니다.
 
         ```javascript
         class Component extends React.Component {
@@ -634,7 +634,7 @@
         }
         ```
 
-    2. **Public class fields syntax:** If you don't like to use bind approach then *public class fields syntax* can be used to correctly bind callbacks.
+    2. **Public class fields syntax:** 만약 bind 접근법을 사용하기 싫다면, *public class fields syntax* 콜백에 정확하게 bind 할 때 사용될 수 있습니다.
 
         ```jsx harmony
         handleClick = () => {
@@ -644,19 +644,19 @@
 
         ```jsx harmony
         <button onClick={this.handleClick}>
-          {'Click me'}
+          {'나를 눌러요~'}
         </button>
         ```
 
-    3. **Arrow functions in callbacks:** You can use *arrow functions* directly in the callbacks.
+    3. **콜백에서 화살표 함수 사용하기:** 콜백에서 바로 *화살표 함수*를 사용할 수 있습니다.
 
         ```jsx harmony
         <button onClick={(event) => this.handleClick(event)}>
-          {'Click me'}
+          {'나를 눌러요~'}
         </button>
         ```
 
-    **Note:** If the callback is passed as prop to child components, those components might do an extra re-rendering. In those cases, it is preferred to go with `.bind()` or *public class fields syntax* approach considering performance.
+    **Note:** 콜백이 자식 component에 prop을 넘긴다면, 자식 component들은 아마 추가로 다시 렌더링 될 수도 있습니다. 이 경우, 성능을 고려하여 `.bind()` 또는 *public class fields syntax* 접근법이 더 좋습니다.
 
 
    **[⬆ Back to Top](#table-of-contents)**
