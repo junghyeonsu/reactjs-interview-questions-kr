@@ -20,7 +20,7 @@
 |12 | [setState()의 인자로서 콜백함수의 목적은 무엇일까요?](#setState()의-인자로서-콜백함수의-목적은-무엇일까요)
 |13 | [HTML와 React간에 이벤트를 다루는 방법의 차이는 무엇일까요?](#HTML와-React간에-이벤트를-다루는-방법의-차이는-무엇일까요) |
 |14 | [JSX 콜백안에 메소드나 이벤트 핸들러를 어떻게 적용할 수 있을까요?](#JSX-콜백안에-메소드나-이벤트-핸들러를-어떻게-적용할-수-있을까요) |
-|15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
+|15 | [콜백이나 이벤트 핸들러에 매개변수를 어떻게 넘길 수 있을까요?](#콜백이나-이벤트-핸들러에-매개변수를-어떻게-넘길-수-있을까요?) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
 |17 | [What are inline conditional expressions?](#what-are-inline-conditional-expressions) |
 |18 | [What is "key" prop and what is the benefit of using it in arrays of elements?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements) |
@@ -661,24 +661,24 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-15. ### How to pass a parameter to an event handler or callback?
+15. ### 콜백이나 이벤트 핸들러에 매개변수를 어떻게 넘길 수 있을까요?
 
-    You can use an *arrow function* to wrap around an *event handler* and pass parameters:
+    *화살표 함수* 를 사용하여 *이벤트 핸들러* 를 감싸고 매개변수를 넘길 수 있습니다:
 
     ```jsx harmony
     <button onClick={() => this.handleClick(id)} />
     ```
 
-    This is an equivalent to calling `.bind`:
+    *화살표 함수* 를 사용하면 `.bind`를 호출하는 것과 같습니다:
 
     ```jsx harmony
     <button onClick={this.handleClick.bind(this, id)} />
     ```
-    Apart from these two approaches, you can also pass arguments to a function which is defined as arrow function
+    이 두 가지 접근 방식 외에도 *화살표 함수* 로 정의 된 함수에 인자를 전달할 수도 있습니다.
     ```jsx harmony
     <button onClick={this.handleClick(id)} />
     handleClick = (id) => () => {
-        console.log("Hello, your ticket number is", id)
+        console.log("안녕, 너의 티켓 번호는", id)
     };
     ```
 
