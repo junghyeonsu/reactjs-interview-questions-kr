@@ -21,7 +21,7 @@
 |13 | [HTML와 React간에 이벤트를 다루는 방법의 차이는 무엇일까요?](#HTML와-React간에-이벤트를-다루는-방법의-차이는-무엇일까요) |
 |14 | [JSX 콜백안에 메소드나 이벤트 핸들러를 어떻게 적용할 수 있을까요?](#JSX-콜백안에-메소드나-이벤트-핸들러를-어떻게-적용할-수-있을까요) |
 |15 | [콜백이나 이벤트 핸들러에 매개변수를 어떻게 넘길 수 있을까요?](#콜백이나-이벤트-핸들러에-매개변수를-어떻게-넘길-수-있을까요?) |
-|16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
+|16 | [리액트에서 synthetic 이벤트는 무엇일까요?](#리액트에서-synthetic-이벤트는-무엇일까요) |
 |17 | [What are inline conditional expressions?](#what-are-inline-conditional-expressions) |
 |18 | [What is "key" prop and what is the benefit of using it in arrays of elements?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
@@ -685,9 +685,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-16. ### What are synthetic events in React?
+16. ### 리액트에서 synthetic 이벤트는 무엇일까요?
 
-    `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including `stopPropagation()` and `preventDefault()`, except the events work identically across all browsers.
+    `SyntheticEvent`는 브라우저의 기본 이벤트를 둘러싼 크로스 브라우저 래퍼입니다. API는 이벤트가 모든 브라우저에서 동일하게 작동한다는 점을 제외하면`stopPropagation ()`및`preventDefault ()`를 포함한 브라우저의 기본 이벤트와 동일합니다.
 
 
    **[⬆ Back to Top](#table-of-contents)**
