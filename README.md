@@ -22,7 +22,7 @@
 |14 | [JSX 콜백안에 메소드나 이벤트 핸들러를 어떻게 적용할 수 있을까요?](#JSX-콜백안에-메소드나-이벤트-핸들러를-어떻게-적용할-수-있을까요) |
 |15 | [콜백이나 이벤트 핸들러에 매개변수를 어떻게 넘길 수 있을까요?](#콜백이나-이벤트-핸들러에-매개변수를-어떻게-넘길-수-있을까요?) |
 |16 | [리액트에서 synthetic 이벤트는 무엇일까요?](#리액트에서-synthetic-이벤트는-무엇일까요) |
-|17 | [What are inline conditional expressions?](#what-are-inline-conditional-expressions) |
+|17 | [inline 조건부 표현식은 무엇일까요?](#inline-조건부-표현식은-무엇일까요) |
 |18 | [What is "key" prop and what is the benefit of using it in arrays of elements?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
@@ -692,20 +692,21 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-17. ### What are inline conditional expressions?
+17. ### inline 조건부 표현식은 무엇일까요?
 
-    You can use either *if statements* or *ternary expressions* which are available from JS to conditionally render expressions. Apart from these approaches, you can also embed any expressions in JSX by wrapping them in curly braces and then followed by JS logical operator `&&`.
+    JS에서 조건부 렌더링을 위해서 사용하는 *if문* 이나 *삼항표현식*을 사용할 수 있습니다. 이러한 접근 방식 외에JSX에 표현식을 중괄호로 묶은 다음 JS 논리 연산자 `&&` 를 사용하여 포함 할 수도 있습니다. 
+    
 
     ```jsx harmony
     <h1>Hello!</h1>
     {
         messages.length > 0 && !isLogin?
           <h2>
-              You have {messages.length} unread messages.
+              {messages.length}만큼의 읽지 않은 메세지가 있습니다.
           </h2>
           :
           <h2>
-              You don't have unread messages.
+              읽지 않은 메세지가 없습니다.
           </h2>
     }
     ```
