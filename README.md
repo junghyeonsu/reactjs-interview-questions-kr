@@ -23,7 +23,7 @@
 |15 | [콜백이나 이벤트 핸들러에 매개변수를 어떻게 넘길 수 있을까요?](#콜백이나-이벤트-핸들러에-매개변수를-어떻게-넘길-수-있을까요?) |
 |16 | [리액트에서 synthetic 이벤트는 무엇일까요?](#리액트에서-synthetic-이벤트는-무엇일까요) |
 |17 | [inline 조건부 표현식은 무엇일까요?](#inline-조건부-표현식은-무엇일까요) |
-|18 | [What is "key" prop and what is the benefit of using it in arrays of elements?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements) |
+|18 | ["key" props은 무엇이고, 배열에서 사용했을 때 이점은 무엇일까요?](#"key"-props은-무엇이고,-배열에서-사용했을-때-이점은-무엇일까요) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
@@ -714,11 +714,11 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-18. ### What is "key" prop and what is the benefit of using it in arrays of elements?
+18. ### "key" props은 무엇이고, 배열에서 사용했을 때 이점은 무엇일까요?
 
-    A `key` is a special string attribute you **should** include when creating arrays of elements. *Key* prop helps React identify which items have changed, are added, or are removed.
+    `key`는 배열의 요소를 만들 때 **반드시** 포함해야 하는 특별한 문자열 특성입니다. *Key* prop은 React에서 배열 아이템들이 어떤 게 삭제됐는지, 변했는지, 추가됐는지를 식별하는데 도움을 줍니다.
 
-    Most often we use ID from our data as *key*:
+    대부분의 경우 ID를 *key*로 사용합니다: 
 
     ```jsx harmony
     const todoItems = todos.map((todo) =>
@@ -728,7 +728,7 @@
     )
     ```
 
-    When you don't have stable IDs for rendered items, you may use the item *index* as a *key* as a last resort:
+    렌더링 된 아이템들에 안정된 ID 값들이 없을 때, 마지막 수단으로 *index*를 *key* 값으로 사용할 수 있습니다:
 
     ```jsx harmony
     const todoItems = todos.map((todo, index) =>
@@ -740,9 +740,9 @@
 
     **Note:**
 
-    1. Using *indexes* for *keys* is **not recommended** if the order of items may change. This can negatively impact performance and may cause issues with component state.
-    2. If you extract list item as separate component then apply *keys* on list component instead of `li` tag.
-    3. There will be a warning message in the console if the `key` prop is not present on list items.
+    1. 만약 배열 아이템들의 순서가 바뀐다면 *key*를 *index*로 사용하는 것은 **추천하지 않습니다.** 성능에 부정적으로 영향을 줄 수 있고, component state에 문제를 야기할 수 있습니다.
+    2. 만약 별도의 component로서 리스트 아이템을 추출한다면, `li` 태그 대신에 `keys`를 리스트 component에 적용합니다.
+    3. 만약 list에 `key` prop 이 없으면 경고 메세지가 뜰 겁니다. 
 
 
    **[⬆ Back to Top](#table-of-contents)**
