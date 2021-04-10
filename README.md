@@ -24,7 +24,7 @@
 |16 | [리액트에서 synthetic 이벤트는 무엇일까요?](#리액트에서-synthetic-이벤트는-무엇일까요) |
 |17 | [inline 조건부 표현식은 무엇일까요?](#inline-조건부-표현식은-무엇일까요) |
 |18 | ["key" props은 무엇이고, 배열에서 사용했을 때 이점은 무엇일까요?](#"key"-props은-무엇이고,-배열에서-사용했을-때-이점은-무엇일까요) |
-|19 | [What is the use of refs?](#what-is-the-use-of-refs) |
+|19 | [refs의 사용처는 무엇일까요?](#refs의-사용처는-무엇일까요) |
 |20 | [How to create refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
 |22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
@@ -747,9 +747,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-19. ### What is the use of refs?
+19. ### refs의 사용처는 무엇일까요?
 
-    The *ref* is used to return a reference to the element. They *should be avoided* in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
+    *ref* 는 element의 참조(reference)를 반환하는데 사용됩니다. 대부분의 경우 *사용을 피해야 하지만*, DOM 요소 또는 component의 요소에 직접 접근을 해야 될 때 사용이 될 수 있습니다.
 
 
    **[⬆ Back to Top](#table-of-contents)**
