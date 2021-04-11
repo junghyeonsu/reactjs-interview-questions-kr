@@ -25,7 +25,7 @@
 |17 | [inline 조건부 표현식은 무엇일까요?](#inline-조건부-표현식은-무엇일까요) |
 |18 | ["key" props은 무엇이고, 배열에서 사용했을 때 이점은 무엇일까요?](#"key"-props은-무엇이고,-배열에서-사용했을-때-이점은-무엇일까요) |
 |19 | [refs의 사용처는 무엇일까요?](#refs의-사용처는-무엇일까요) |
-|20 | [How to create refs?](#how-to-create-refs)
+|20 | [refs는 어떻게 사용할까요?](#refs는-어떻게-사용할까요)
 |21 | [What are forward refs?](#what-are-forward-refs) |
 |22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
 |23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
@@ -754,10 +754,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-20. ### How to create refs?
+20. ### refs는 어떻게 사용할까요?
 
-    There are two approaches
-    1. This is a recently added approach. *Refs* are created using `React.createRef()` method and attached to React elements via the `ref` attribute. In order to use *refs* throughout the component, just assign the *ref* to the instance property within constructor.
+    두 개의 접근 방식이 있습니다.
+    1. 첫번째는 최근에 추가된 접근법입니다. *Refs* 는 `React.createdRef()` 메소드를 사용해서 만들어지고, *ref* 특성을 통해 React 요소에 추가됩니다. component를 통해서 *refs* 를 사용하기 위해서는, *ref*를 constructor 안의 인스턴스 특성에 할당하기만 하면 됩니다.
 
         ```jsx harmony
         class MyComponent extends React.Component {
@@ -770,7 +770,7 @@
           }
         }
         ```
-    2. You can also use ref callbacks approach regardless of React version. For example, the search bar component's input element accessed as follows,
+    2. React 버전에 상관없이 *ref* 콜백 함수를 사용할 수 있습니다. 예를 들어, 검색창 component의 입력 요소는 다음과 같이 접근할 수 있습니다.
         ```jsx harmony
         class SearchBar extends Component {
            constructor(props) {
@@ -795,8 +795,8 @@
         }
         ```
 
-    You can also use *refs* in function components using **closures**.
-    **Note**: You can also use inline ref callbacks even though it is not a recommended approach
+    그리고 *refs* 를 **closures**를 사용해서 함수형 component에 사용할 수 있습니다.
+    **Note**: 추천하진 않지만, inline ref 콜백함수를 사용할 수 있습니다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
