@@ -26,7 +26,7 @@
 |18 | ["key" props은 무엇이고, 배열에서 사용했을 때 이점은 무엇일까요?](#"key"-props은-무엇이고,-배열에서-사용했을-때-이점은-무엇일까요) |
 |19 | [refs의 사용처는 무엇일까요?](#refs의-사용처는-무엇일까요) |
 |20 | [refs는 어떻게 사용할까요?](#refs는-어떻게-사용할까요)
-|21 | [What are forward refs?](#what-are-forward-refs) |
+|21 | [forward refs는 무엇일까요?](#forward-refs는-무엇일까요) |
 |22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
 |23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
 |24 | [What is Virtual DOM?](#what-is-virtual-dom) |
@@ -800,9 +800,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-21. ### What are forward refs?
+21. ### forward refs는 무엇일까요?
 
-    *Ref forwarding* is a feature that lets some components take a *ref* they receive, and pass it further down to a child.
+    *Ref forwarding* 은 어떤 component가 받은 *ref*를 가져와서 자식 component에게 전달할 수 있는 기능입니다.
 
     ```jsx harmony
     const ButtonElement = React.forwardRef((props, ref) => (
