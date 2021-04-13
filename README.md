@@ -27,7 +27,7 @@
 |19 | [refs의 사용처는 무엇일까요?](#refs의-사용처는-무엇일까요) |
 |20 | [refs는 어떻게 사용할까요?](#refs는-어떻게-사용할까요)
 |21 | [forward refs는 무엇일까요?](#forward-refs는-무엇일까요) |
-|22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
+|22 | [callback refs와 findDOMNode() 중에서 선호되는 옵션은 무엇일까요?](#callback-refs와-findDOMNode()-중에서-선호되는-옵션은-무엇일까요) |
 |23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
 |24 | [What is Virtual DOM?](#what-is-virtual-dom) |
 |25 | [How Virtual DOM works?](#how-virtual-dom-works) |
@@ -819,11 +819,11 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-22. ### Which is preferred option with in callback refs and findDOMNode()?
+22. ### callback refs와 findDOMNode() 중에서 선호되는 옵션은 무엇일까요?
 
-    It is preferred to use *callback refs* over `findDOMNode()` API. Because `findDOMNode()` prevents certain improvements in React in the future.
+    `findDOMNode()` API를 사용하는 것보다 *callback refs*를 사용하는 것이 선호됩니다. 왜냐하면 `findDOMNode()`는 향후에 React의 특정 향상을 방지하기 때문입니다.
 
-    The **legacy** approach of using `findDOMNode`:
+    `findDOMNode`를 사용하는 **레거시** 접근법입니다:
 
     ```javascript
     class MyComponent extends Component {
@@ -837,7 +837,7 @@
     }
     ```
 
-    The recommended approach is:
+    추천되는 접근법입니다:
 
     ```javascript
     class MyComponent extends Component {
