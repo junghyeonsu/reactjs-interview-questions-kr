@@ -28,8 +28,8 @@
 |20 | [refs는 어떻게 사용할까요?](#refs는-어떻게-사용할까요)
 |21 | [forward refs는 무엇일까요?](#forward-refs는-무엇일까요) |
 |22 | [callback refs와 findDOMNode() 중에서 선호되는 옵션은 무엇일까요?](#callback-refs와-findDOMNode()-중에서-선호되는-옵션은-무엇일까요) |
-|23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
-|24 | [What is Virtual DOM?](#what-is-virtual-dom) |
+|23 | [String Refs가 legacy인 이유는 무엇일까요?](#String-Refs가-legacy인-이유는-무엇일까요?) |
+|24 | [Virtual DOM이 무엇일까요?](#Virtual-DOM이-무엇일까요) |
 |25 | [How Virtual DOM works?](#how-virtual-dom-works) |
 |26 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
 |27 | [What is React Fiber?](#what-is-react-fiber) |
@@ -858,14 +858,17 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-23. ### Why are String Refs legacy?
+23. ### String Refs가 legacy인 이유는 무엇일까요?
 
-    If you worked with React before, you might be familiar with an older API where the `ref` attribute is a string, like `ref={'textInput'}`, and the DOM node is accessed as `this.refs.textInput`. We advise against it because *string refs have below issues*, and are considered legacy. String refs were **removed in React v16**.
+    #### React v16에서 제거되어서 번역이 조금 이상할 수 있습니다.
 
-    1. They *force React to keep track of currently executing component*. This is problematic because it makes react module stateful, and thus causes weird errors when react module is duplicated in the bundle.
-    2. They are *not composable* — if a library puts a ref on the passed child, the user can't put another ref on it. Callback refs are perfectly composable.
-    3. They *don't work with static analysis* like Flow. Flow can't guess the magic that framework does to make the string ref appear on `this.refs`, as well as its type (which could be different). Callback refs are friendlier to static analysis.
-    4. It doesn't work as most people would expect with the "render callback" pattern (e.g. <DataGrid renderRow={this.renderRow} />)
+    이전에 React로 작업했다면`ref` 속성이`ref = { 'textInput'}`과 같은 문자열이고 DOM 노드가`this.refs.textInput`으로 액세스되는 이전 API에 익숙 할 것입니다. *문자열 참조에는 다음과 같은 문제가 있으며*  레거시로 간주되기 때문에 권장하지 않습니다. 문자열 참조는 **React v16에서 제거되었습니다**.
+
+    1. 그들은 *현재 실행중인 구성 요소를 추적하도록 React를 강제합니다*. 이것은 반응 모듈을 상태 저장하기 때문에 문제가되며, 따라서 반응 모듈이 번들에 복제 될 때 이상한 오류가 발생합니다.
+    2. 그것들은 *구성 할 수 없습니다* — 라이브러리가 전달 된 자식에 ref를 넣는 경우, 사용자는 그것에 다른 ref를 넣을 수 없습니다. 콜백 참조는 완벽하게 구성 할 수 있습니다.
+    3. Flow와 같은 *정적 분석* 에서는 작동하지 않습니다. Flow는 프레임 워크가 문자열 ref가`this.refs`에 나타나도록 만드는 마법과 그 유형 (다를 수 있음)을 추측 할 수 없습니다. 콜백 참조는 정적 분석에 더 친숙합니다.
+    4. 대부분이 기대하는 "렌더 콜백" 패턴 (예 : <DataGrid renderRow = {this.renderRow} /> 처럼 작동하지 않습니다.
+
        ```jsx harmony
        class MyComponent extends Component {
          renderRow = (index) => {
@@ -884,9 +887,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-24. ### What is Virtual DOM?
+24. ### Virtual DOM이 무엇일까요?
 
-    The *Virtual DOM* (VDOM) is an in-memory representation of *Real DOM*. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called *reconciliation*.
+    *Virtual DOM*은 *Real DOM*의 메모리 내에서 작동하는 것입니다. UI적 표현은 메모리안에 유지되고, "실제" DOM과 동기화(synced)가 됩니다. 호출되는 렌더링 함수와 화면에 요소를 표시하는 사이에 발생하는 단계입니다. 이 전체 프로세스를 *조정(reconciliation)* 이라고합니다.
 
 
    **[⬆ Back to Top](#table-of-contents)**
