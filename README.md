@@ -30,7 +30,7 @@
 |22 | [callback refs와 findDOMNode() 중에서 선호되는 옵션은 무엇일까요?](#callback-refs와-findDOMNode()-중에서-선호되는-옵션은-무엇일까요) |
 |23 | [String Refs가 legacy인 이유는 무엇일까요?](#String-Refs가-legacy인-이유는-무엇일까요?) |
 |24 | [Virtual DOM이 무엇일까요?](#Virtual-DOM이-무엇일까요) |
-|25 | [How Virtual DOM works?](#how-virtual-dom-works) |
+|25 | [Virtual DOM은 어떻게 동작할까요?](#Virtual-DOM은-어떻게-동작할까요) |
 |26 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
 |27 | [What is React Fiber?](#what-is-react-fiber) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
@@ -894,19 +894,19 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-25. ### How Virtual DOM works?
+25. ### Virtual DOM은 어떻게 동작할까요?
 
-    The *Virtual DOM* works in three simple steps.
+    *Virtual DOM*은 세 가지의 단계로 동작합니다.
 
-    1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+    1. 기본 데이터가 변경 될 때마다 전체 UI가 Virtual DOM으로 다시 렌더링됩니다.
 
         ![vdom](images/vdom1.png)
 
-    2. Then the difference between the previous DOM representation and the new one is calculated.
+    2. 그런 다음 이전 DOM과 새 DOM간의 차이가 계산됩니다.
 
         ![vdom2](images/vdom2.png)
 
-    3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+    3. 계산이 완료되면 실제 DOM은 실제로 변경된 것만 업데이트됩니다.
 
         ![vdom3](images/vdom3.png)
 
