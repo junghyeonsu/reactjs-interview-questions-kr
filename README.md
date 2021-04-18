@@ -32,7 +32,7 @@
 |24 | [Virtual DOM이 무엇일까요?](#Virtual-DOM이-무엇일까요) |
 |25 | [Virtual DOM은 어떻게 동작할까요?](#Virtual-DOM은-어떻게-동작할까요) |
 |26 | [Shadow DOM과 Virtual DOM의 차이점은 무엇일까요?](#Shadow-DOM과-Virtual-DOM의-차이점은-무엇일까요) |
-|27 | [What is React Fiber?](#what-is-react-fiber) |
+|27 | [React Fiber가 무엇일까요?](#React-Fiber가-무엇일까요) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
 |29 | [What are controlled components?](#what-are-controlled-components) |
 |30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
@@ -920,10 +920,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-27. ### What is React Fiber?
+27. ### React Fiber가 무엇일까요?
 
-    Fiber is the new *reconciliation* engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
-
+    Fiber는 React v16의 새로운 *조정* 엔진 또는 핵심 알고리즘의 재 구현입니다. React Fiber의 목표는 애니메이션, 레이아웃, 제스처, 작업 일시 중지, 중단 또는 재사용 기능과 같은 영역에 대한 적합성을 높이고 다양한 유형의 업데이트에 우선 순위를 할당하는 것입니다. 그리고 새로운 동시성 기초 요소입니다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
