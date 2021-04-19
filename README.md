@@ -33,7 +33,7 @@
 |25 | [Virtual DOM은 어떻게 동작할까요?](#Virtual-DOM은-어떻게-동작할까요) |
 |26 | [Shadow DOM과 Virtual DOM의 차이점은 무엇일까요?](#Shadow-DOM과-Virtual-DOM의-차이점은-무엇일까요) |
 |27 | [React Fiber가 무엇일까요?](#React-Fiber가-무엇일까요) |
-|28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
+|28 | [React Fiber의 주요 목적은 무엇일까요?](#React-Fiber의-주요-목적은-무엇일까요) |
 |29 | [What are controlled components?](#what-are-controlled-components) |
 |30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
 |31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
@@ -926,10 +926,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-28. ### What is the main goal of React Fiber?
+28. ### React Fiber의 주요 목적은 무엇일까요?
 
     The goal of *React Fiber* is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is **incremental rendering**: the ability to split rendering work into chunks and spread it out over multiple frames.
-
+    *React Fiber*의 목표는 애니메이션, 레이아웃 및 제스처와 같은 영역에 대한 적합성을 높이는 것입니다. 헤드 라인 기능은 **증분 렌더링** : 렌더링 작업을 청크로 분할하고 여러 프레임에 분산시키는 기능입니다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
