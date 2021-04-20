@@ -933,11 +933,11 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-29. ### What are controlled components?
+29. ### controlled component는 무엇일까요?
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function.
+    후속 사용자 입력에서 양식 내의 입력 요소를 제어하는 ​​구성 요소를 **Controlled Component**라고합니다. 즉, 모든 state 변형에는 연결된 handler 함수가 있습니다.
 
-    For example, to write all the names in uppercase letters, we use handleChange as below,
+    예를 들어, 모든 문자를 대문자로 쓰기 위해서는, 아래와 같이 handleChange를 사용합니다.
 
     ```javascript
     handleChange(event) {
