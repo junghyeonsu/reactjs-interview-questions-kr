@@ -34,8 +34,8 @@
 |26 | [Shadow DOM과 Virtual DOM의 차이점은 무엇일까요?](#Shadow-DOM과-Virtual-DOM의-차이점은-무엇일까요) |
 |27 | [React Fiber가 무엇일까요?](#React-Fiber가-무엇일까요) |
 |28 | [React Fiber의 주요 목적은 무엇일까요?](#React-Fiber의-주요-목적은-무엇일까요) |
-|29 | [What are controlled components?](#what-are-controlled-components) |
-|30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
+|29 | [controlled components는 무엇일까요?](#controlled-components는-무엇일까요) |
+|30 | [uncontrolled components는 무엇일까요?](#uncontrolled-components는-무엇일까요) |
 |31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
@@ -948,11 +948,11 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-30. ### What are uncontrolled components?
+30. ### uncontrolled components는 무엇일까요?
 
-    The **Uncontrolled Components** are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
+    **Uncontrolled Components**는 자체 state를 내부적으로 저장하는 구성 요소이며, 필요할 때 현재 값을 찾기 위해 ref를 사용하여 DOM을 쿼리합니다. 이것은 전통적인 HTML과 좀 더 비슷합니다.
 
-    In the below UserProfile component, the `name` input is accessed using ref.
+    아래 UserProfile 컴포넌트에서 `name` input은 ref를 사용하여 접근됩니다
 
     ```jsx harmony
     class UserProfile extends React.Component {
@@ -981,8 +981,7 @@
     }
     ```
 
-    In most cases, it's recommend to use controlled components to implement forms.
-
+    대부분의 경우 controlled components를 사용하여 form을 구현하는 것이 좋습니다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
