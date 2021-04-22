@@ -36,7 +36,7 @@
 |28 | [React Fiber의 주요 목적은 무엇일까요?](#React-Fiber의-주요-목적은-무엇일까요) |
 |29 | [controlled components는 무엇일까요?](#controlled-components는-무엇일까요) |
 |30 | [uncontrolled components는 무엇일까요?](#uncontrolled-components는-무엇일까요) |
-|31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
+|31 | [createElement과 cloneElement의 차이점은 무엇일까요?](#createElement과-cloneElement의-차이점은-무엇일까요) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
@@ -985,10 +985,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-31. ### What is the difference between createElement and cloneElement?
+31. ### createElement과 cloneElement의 차이점은 무엇일까요?
 
-    JSX elements will be transpiled to `React.createElement()` functions to create React elements which are going to be used for the object representation of UI. Whereas `cloneElement` is used to clone an element and pass it new props.
-
+    JSX element는 UI의 객체 표현에 사용될 React element를 생성하기 위해 `React.createElement()` 함수로 트랜스 파일(특정 소스 코드를 다른 소스 코드로 변환 시키는 과정)됩니다. 반면 `cloneElement` 는 element를 복제하고 새 props을 전달하는 데 사용됩니다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
