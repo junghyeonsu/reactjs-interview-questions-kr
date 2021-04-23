@@ -37,7 +37,7 @@
 |29 | [controlled components는 무엇일까요?](#controlled-components는-무엇일까요) |
 |30 | [uncontrolled components는 무엇일까요?](#uncontrolled-components는-무엇일까요) |
 |31 | [createElement과 cloneElement의 차이점은 무엇일까요?](#createElement과-cloneElement의-차이점은-무엇일까요) |
-|32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
+|32 | [React에서 Lifting State Up은 무엇일까요?](#React에서-Lifting-State-Up은-무엇일까요) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
 |35 | [What are Higher-Order components?](#what-are-higher-order-components) |
@@ -991,9 +991,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-32. ### What is Lifting State Up in React?
+32. ### React에서 Lifting State Up은 무엇일까요?
 
-    When several components need to share the same changing data then it is recommended to *lift the shared state up* to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+    여러 component가 동일한 변경 데이터를 공유해야하는 경우 *공유 상태를 가장 가까운 공통 조상으로 높이는(lift the shared state up)* 것이 좋습니다. 즉, 두 개의 하위 component가 상위에서 동일한 데이터를 공유하는 경우 자식 component에서 state를 유지하는 것보다 state를 부모로 이동시키는 것을 의미합니다.
 
 
    **[⬆ Back to Top](#table-of-contents)**
