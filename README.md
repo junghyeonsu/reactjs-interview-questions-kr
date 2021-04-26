@@ -1052,22 +1052,22 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-35. ### What are Higher-Order Components?
+35. ### Higher-Order Component는 무엇일까요?
 
-    A *higher-order component* (*HOC*) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
+    *higher-order component* (*HOC*)는 component를 가져와 새 component를 반환하는 함수입니다. 기본적으로 React의 구성 특성에서 파생 된 패턴입니다.
 
-    We call them **pure components** because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
+    동적으로 제공되는 모든 자식 component를 허용 할 수 있지만 입력 component의 동작을 수정하거나 복사하지 않기 때문에 **pure components** 라고합니다.
 
     ```javascript
     const EnhancedComponent = higherOrderComponent(WrappedComponent)
     ```
 
-    HOC can be used for many use cases:
+    HOC는 많은 사용 사례에 사용할 수 있습니다.
 
-    1. Code reuse, logic and bootstrap abstraction.
-    2. Render hijacking.
-    3. State abstraction and manipulation.
-    4. Props manipulation.
+    1. 코드 재사용, logic 및 bootstrap 추상화.
+    2. hijacking 렌더링.
+    3. State 추상화 및 조작.
+    4. Props 조작.
 
 
    **[⬆ Back to Top](#table-of-contents)**
