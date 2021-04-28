@@ -38,10 +38,10 @@
 |30 | [uncontrolled components는 무엇일까요?](#uncontrolled-components는-무엇일까요) |
 |31 | [createElement과 cloneElement의 차이점은 무엇일까요?](#createElement과-cloneElement의-차이점은-무엇일까요) |
 |32 | [React에서 Lifting State Up은 무엇일까요?](#React에서-Lifting-State-Up은-무엇일까요) |
-|33 | [component의 각 라이프사이클 단계들의 차이점은 무엇일까요?](#component의-각-라이프사이클-단계들의-차이점은-무엇일까요) |
-|34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
-|35 | [What are Higher-Order components?](#what-are-higher-order-components) |
-|36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
+|33 | [component lifecycle의 단계들의 차이점은 무엇일까요?](#component-lifecycle의-단계들의-차이점은-무엇일까요) |
+|34 | [React에서 lifecycle method는 무엇일까요?](#React에서-lifecycle-method는-무엇일까요) |
+|35 | [Higher-Order Component는 무엇일까요?](#Higher-Order-Component는-무엇일까요) |
+|36 | [HOC component를 위한 props proxy는 어떻게 만들까요?](#HOC-component를-위한-props-proxy는-어떻게-만들까요) |
 |37 | [What is context?](#what-is-context) |
 |38 | [What is children prop?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
@@ -998,7 +998,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-33. ### What are the different phases of component lifecycle?
+33. ### component lifecycle의 단계들의 차이점은 무엇일까요?
 
     The component lifecycle has three distinct lifecycle phases:
 
@@ -1072,9 +1072,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-36. ### How to create props proxy for HOC component?
+36. ### HOC component를 위한 props proxy는 어떻게 만들까요?
 
-    You can add/edit props passed to the component using *props proxy* pattern like this:
+    *props proxy* 패턴을 사용해서 component에 전달 된 props를 추가/수정을 할 수 있습니다.
 
     ```jsx harmony
     function HOC(WrappedComponent) {
