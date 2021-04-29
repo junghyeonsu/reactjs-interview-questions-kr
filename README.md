@@ -1000,30 +1000,29 @@
     
 33. ### component lifecycle의 단계들의 차이점은 무엇일까요?
 
-    The component lifecycle has three distinct lifecycle phases:
+    component 수명주기에는 세 가지 고유한 수명주기 단계가 있습니다.
 
-    1. **Mounting:** The component is ready to mount in the browser DOM. This phase covers initialization from `constructor()`, `getDerivedStateFromProps()`, `render()`, and `componentDidMount()` lifecycle methods.
+    1. **Mounting:** component가 브라우저 DOM에 mount할 준비가 되었습니다. 이 단계에서는 `constructor ()`,`getDerivedStateFromProps ()`,`render ()` 및 `componentDidMount ()` 수명주기 메소드의 초기화를 다룹니다.
 
-    2. **Updating:** In this phase, the component get updated in two ways, sending the new props and updating the state either from `setState()` or `forceUpdate()`. This phase covers `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()` and `componentDidUpdate()` lifecycle methods.
+    2. **Updating:** 이 단계에서 component는 두 가지 방법으로 업데이트됩니다. 새 props를 보내고 `setState ()` 또는 `forceUpdate ()`에서 state를 업데이트합니다. 이 단계에서는 `getDerivedStateFromProps ()`,`shouldComponentUpdate ()`,`render ()`,`getSnapshotBeforeUpdate ()` 및 `componentDidUpdate ()`수명주기 메소드를 다룹니다.
 
-    3. **Unmounting:** In this last phase, the component is not needed and get unmounted from the browser DOM. This phase includes `componentWillUnmount()` lifecycle method.
+    3. **Unmounting:** 이 마지막 단계에서는 component가 필요하지 않으며 브라우저 DOM에서 unmount됩니다. 이 단계에는`componentWillUnmount ()` 라이프 사이클 메소드가 포함됩니다.
 
-    It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows
+    React는 DOM에 변경 사항을 적용 할 때 내부적으로 단계 개념이 있다는 점을 언급 할 가치가 있습니다. 다음과 같이 구분됩니다.
 
-    1. **Render** The component will render without any side-effects. This applies for Pure components and in this phase, React can pause, abort, or restart the render.
+    1. **Render** component는 부작용없이 렌더링됩니다. 이는 Pure component에 적용되며이 단계에서 React는 렌더링을 일시 중지, 중단 또는 다시 시작할 수 있습니다.
 
-    2. **Pre-commit** Before the component actually applies the changes to the DOM, there is a moment that allows React to read from the DOM through the `getSnapshotBeforeUpdate()`.
+    2. **Pre-commit** component가 DOM에 변경 사항을 실제로 적용하기 전에 React가`getSnapshotBeforeUpdate ()`를 통해 DOM에서 읽을 수 있는 시간이 있습니다.
 
-    3. **Commit** React works with the DOM and executes the final lifecycles respectively `componentDidMount()` for mounting, `componentDidUpdate()` for updating, and `componentWillUnmount()` for unmounting.
+    3. **Commit** React는 DOM과 함께 작동하며 최종 수명주기를 각각 mount할 때 `componentDidMount ()`, 업데이트 할 때 `componentDidUpdate ()`, unmount할 때 `componentWillUnmount ()`를 실행합니다.
 
-    React 16.3+ Phases (or an [interactive version](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
+    React 16.3 버전 이후 (or an [interactive version](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
 
     ![phases 16.3+](images/phases16.3.jpg)
 
-    Before React 16.3
+    React 16.3 버전 이전
 
     ![phases 16.2](images/phases.png)
-
 
 
    **[⬆ Back to Top](#table-of-contents)**
