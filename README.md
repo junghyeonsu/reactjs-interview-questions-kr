@@ -43,7 +43,7 @@
 |35 | [Higher-Order Component는 무엇일까요?](#Higher-Order-Component는-무엇일까요) |
 |36 | [HOC component를 위한 props proxy는 어떻게 만들까요?](#HOC-component를-위한-props-proxy는-어떻게-만들까요) |
 |37 | [context가 뭘까요?](#context가-뭘까요) |
-|38 | [What is children prop?](#what-is-children-prop) |
+|38 | [children prop가 뭘까요?](#children-prop가-뭘까요) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
 |41 | [What is reconciliation?](#what-is-reconciliation) |
@@ -1041,7 +1041,7 @@
 
     React 16.3+
 
-    - **getDerivedStateFromProps:** `render ()`를 호출하기 직전에 호출되며 *모든* 렌더링시 호출됩니다. 이것은 파생 된 상태가 필요한 드문 사용 사례에 존재합니다. [파생 상태가 필요한 경우] (https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)를 읽을 가치가 있습니다.
+    - **getDerivedStateFromProps:** `render ()`를 호출하기 직전에 호출되며 *모든* 렌더링시 호출됩��다. 이것은 파생 된 상태가 필요한 드문 사용 사례에 존재합니다. [파생 상태가 필요한 경우] (https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)를 읽을 가치가 있습니다.
     - **componentDidMount:** 첫 번째 렌더링 후 실행되며 모든 AJAX 요청, DOM 또는 state 업데이트 및 설정 이벤트 리스너가 발생해야합니다.
     - **shouldComponentUpdate:** component를 업데이트할지 여부를 결정합니다. 기본적으로 'true'를 반환합니다. state 또는 props가 업데이트 된 후 component를 렌더링 할 필요가 없다고 확신하는 경우 false 값을 반환 할 수 있습니다. 컴포넌트가 새 props를 받을 경우 다시 렌더링되는 것을 방지 할 수 있으므로 성능을 향상시킬 수 있는 좋은 단계입니다.
     - **getSnapshotBeforeUpdate:** 렌더링 된 출력이 DOM에 커밋되기 직전에 실행됩니다. 이것에 의해 반환 된 모든 값은`componentDidUpdate ()`로 전달됩니다. 이는 DOM에서 정보, 즉 스크롤 위치를 캡처하는 데 유용합니다.
@@ -1108,13 +1108,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-38. ### What is children prop?
+38. ### children prop가 뭘까요?
 
-    *Children* is a prop (`this.props.children`) that allow you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as `children` prop.
+    *Children*은 사용하는 다른 props과 마찬가지로 component를 다른 component에 데이터로 전달할 수 있는 prop (`this.props.children`)입니다. Component의 여는 태그와 닫는 태그 사이에 놓인 component 트리는 `children` prop으로 해당 component에 전달됩니다.
 
-    There are a number of methods available in the React API to work with this prop. These include `React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only`, `React.Children.toArray`.
+    이 prop과 함께 작동하기 위해 React API에서 사용할 수 있는 여러 메소드가 있습니다. 여기에는 `React.Children.map`,`React.Children.forEach`,`React.Children.count`,`React.Children.only`,`React.Children.toArray`가 포함됩니다.
 
-    A simple usage of children prop looks as below,
+    Children props의 간단한 사용법은 다음과 같습니다.
 
     ```jsx harmony
     const MyDiv = React.createClass({
