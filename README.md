@@ -46,7 +46,7 @@
 |38 | [children prop가 뭘까요?](#children-prop가-뭘까요) |
 |39 | [React에서 주석은 어떻게 작성할까요?](#React에서-주석은-어떻게-작성할까요) |
 |40 | [super constructor with props 인자를 사용하는 이유는 무엇일까요?](#super-constructor-with-props-인자를-사용하는-이유는-무엇일까요) |
-|41 | [What is reconciliation?](#what-is-reconciliation) |
+|41 | [reconciliation가 무엇일까요?](#reconciliation가-무엇일까요) |
 |42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
 |44 | [Is lazy function supports named exports?](#is-lazy-function-supports-named-exports) |
@@ -1204,10 +1204,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-41. ### What is reconciliation?
+41. ### reconciliation가 무엇일까요?
 
-    When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called *reconciliation*.
-
+    component의 props나 state가 바뀔 때, React는 새롭게 반환된 요소와 이전에 렌더링된 요소와 비교를 함으로써 실제 DOM이 업데이트 되어야 하는지를 결정합니다. 만약 둘이 다르다면, React는 DOM을 갱신할 것 입니다. 이러한 과정이 *reconciliation*라고 합니다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
